@@ -1,0 +1,39 @@
+.form_login {
+  align-items: center;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.form_login_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form_login_container > input {
+  border: 1px solid $grey;
+  border-radius: 8px;
+  background: $grey;
+  outline: none;
+  padding: 8px;
+  transition: 0.3s ease-in-out;
+
+  &:focus {
+    border: 1px solid $cyan;
+  }
+}
+
+.form_login_container > button {
+  background: $black;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+
+  &:hover {
+    background: lighten($color: $black, $amount: 10);
+  }
+}
