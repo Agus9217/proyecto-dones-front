@@ -1,6 +1,13 @@
+body {
+  background: #fffbd5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, $black, $dark_blue, $cyan);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, $black, $dark_blue, $cyan); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .form_login {
   align-items: center;
   display: flex;
+  color: #fff;
   height: 100dvh;
   justify-content: center;
   max-width: 100%;
@@ -9,31 +16,49 @@
 .form_login_container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+}
+
+.form_login_container > label {
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 .form_login_container > input {
-  border: 1px solid $grey;
+  border: 2px solid $grey;
   border-radius: 8px;
   background: $grey;
+  color: #fff;
   outline: none;
   padding: 8px;
   transition: 0.3s ease-in-out;
+  width: 250px;
 
   &:focus {
-    border: 1px solid $cyan;
+    border-color: $cyan;
   }
 }
 
 .form_login_container > button {
   background: $black;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #fff;
   cursor: pointer;
   color: #fff;
   padding: 10px;
 
   &:hover {
-    background: lighten($color: $black, $amount: 10);
+    background: lighten($color: $black, $amount: 5);
+    transition: 0.2 ease-in-out;
   }
+}
+
+.form_login_group_title {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.form_login_group_title > h2 {
+  padding: 15px 0;
+  font-size: 3rem;
 }
